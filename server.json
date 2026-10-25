@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/entur",
   "title": "Entur",
   "description": "Entur MCP — Norway public transport, nationwide, all modes (developer.entur.org)",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "websiteUrl": "https://pipeworx.io/packs/entur",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-entur",
