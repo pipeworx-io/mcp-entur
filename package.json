@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-entur",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Entur MCP — Norway public transport, nationwide, all modes (developer.entur.org)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-entur": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "entur"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-entur.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/entur",
   "pipeworx": {
-    "sourceHash": "v1-d894a100aeffbcb9aa361c8ffc04b26b3f029eadd293f730160e9c5b4325dcba",
-    "sourceCommit": "722087a9bda73f85942e8f6bbfd598544cb0d490"
+    "mode": "gateway",
+    "slug": "entur",
+    "gatewaySlug": "entur",
+    "sourceHash": "v1-1d5912805a0bbbdf7d40e356526e98b9ed107e93eda3e59f7d570459f234b04c",
+    "sourceCommit": "bb047243cf27f32453103de186b8e6a8b6a1ce79"
   }
 }
